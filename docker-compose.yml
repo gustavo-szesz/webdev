@@ -1,0 +1,11 @@
+services:
+  nest-app:
+    build:
+      context: ./email-analyzer
+      dockerfile: Dockerfile
+    image: email-analyzer:latest
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: 3000
+    restart: unless-stopped
